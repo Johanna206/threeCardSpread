@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Reading</title>
+    <link href="CSS/styles.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="scripts/three_card_spread.js"></script>
+</head>
+<body>
+    <h1>Three Card Spread Tarot Reading</h1>
+    <div id="cardTable">
+        <div class="card">
+            <img src="images/back.jpg" alt="left card" id="left" class="left" onclick="clickCard('left')">
+            <p id="focus1">Past</p>
+        </div>
+        <div class="card">
+            <img src="images/back.jpg" alt="center card" id="center" class="center" onclick="clickCard('center')">
+            <p id="focus2">Present</p>
+        </div>
+        <div class="card">
+            <img src="images/back.jpg" alt="right card" id="right" class="right" onclick="clickCard('right')">
+            <p id="focus3">Future</p>
+        </div>
+        
+    </div>  
+    <div id="resetButton">
+        <label for="focus" id="focusLabel">Choose a focus for your reading:</label>
+        <select name="focus" id="focusList">
+          <option value="focus1">Past, Present, Future</option>
+          <option value="focus2">You, Your Path, Your Potenial</option>
+          <option value="focus3">You, Relationship, Partner</option>
+          <option value="focus4">Situation, Action, Outcome</option>
+          <option value="focus5">Idea, Process, Aspiration</option>
+        </select> 
+        <button id="focusReset" onclick="reset()">Reset</button>
+    </div>  
+    <div id="text">
+        <h3>What does it mean?</h3>
+        <p>It doesn't mean anything; the cards are chosen at radom. You are free to interpret the cards however you wish and if you don't like your reading, click 'reset' for another one. You can also select a different focus for your reading. </p>
+    </div>
+</body>
+</html>
